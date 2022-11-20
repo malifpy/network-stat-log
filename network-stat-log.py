@@ -67,7 +67,7 @@ if args.plot_title is not None:
 ax.legend(loc="upper right")
 ax.set_ylim(bottom=0)
 ax.set_xlabel("Time (second)")
-ax.set_ylabel(df.columns[cols_idx[0][0]][2:])
+ax.set_ylabel(f"Speed ({df.columns[cols_idx[0][0]][2:]})")
 
 fig.savefig(FIG_OUTPUT)
 print(f"Plot saved at {FIG_OUTPUT}")
