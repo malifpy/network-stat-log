@@ -15,8 +15,8 @@ parser = argparse.ArgumentParser(
         description= "Men-log statistik jaringan dan membuat plot",
     )
 parser.add_argument(
-        'plot_title',
-        help="Judul Plot"
+        '--plot_title',
+        help="Judul Plot",
     )
 args = parser.parse_args()
 
@@ -65,6 +65,7 @@ for col_idx, col_name in cols_idx:
 if args.plot_title is not None:
     ax.set_title(args.plot_title)
 ax.legend(loc="upper right")
+ax.set_xlim(left=0)
 ax.set_ylim(bottom=0)
 ax.set_xlabel("Time (second)")
 ax.set_ylabel(f"Speed ({df.columns[cols_idx[0][0]][2:]})")
